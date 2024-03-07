@@ -4,6 +4,8 @@ import Header from "../header/Header"
 import Users from "../users/Users"
 import { StyledMainContainer } from "./main-container.styles"
 
+
+
 const MainContainer = ()=>{
     
    const[filterActive,setFilterActive]= useState(false)
@@ -14,12 +16,15 @@ const MainContainer = ()=>{
    filteredUsers=filterFindName(filteredUsers ,findName)
    
    
+   
   
   
     return(
         <StyledMainContainer>
             <Header setFilterActive={setFilterActive} setSortByName={setSortByName} setFindName={setFindName} />
             <Users  users={filteredUsers}/>
+            
+            
            
         </StyledMainContainer>
     )
@@ -54,8 +59,6 @@ const filterFindName = (users,findName)=>{
 
 
 
-
-
 const filterUsersByName = (users, sortByName)=>{
     
     if(sortByName=== '0' || sortByName===0){
@@ -66,7 +69,6 @@ const filterUsersByName = (users, sortByName)=>{
             a.name.localeCompare(b.name))
      }
 }
-
     
 const filterUsersByActive = (users,filterActive)=>{
     

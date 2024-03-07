@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   
   body{
     margin: 0;
-    color: white;
+    color: black;
     background-color: #ebebed;
     font-family: sans-serif;
   }
